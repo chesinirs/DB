@@ -1,0 +1,17 @@
+use produto;
+INSERT INTO produto.unid (unid_nome) VALUES ('kilo');
+INSERT INTO produto.unid (unid_nome) VALUES ('unidade');
+INSERT INTO produto.unid (unid_nome) VALUES ('litros');
+
+INSERT INTO produto.prod (prod_nome,prod_valor,prod_qtde,unid_id) VALUES ('carne',30,2,1);
+INSERT INTO produto.prod (prod_nome,prod_valor,prod_qtde,unid_id) VALUES ('oleo',30,1,2);
+INSERT INTO produto.prod (prod_nome,prod_valor,prod_qtde,unid_id) VALUES ('leite',30,1.5,3);
+INSERT INTO produto.prod (prod_nome,prod_valor,prod_qtde,unid_id) VALUES ('alface',30,1,2);
+
+update produto.prod /*banco.tabela*/ set prod_valor/*coluna a ser alterada*/=25/*valor alterado*/ where (prod_id = 1);/*id do produto a ser alterado*/
+
+select * from prod;
+
+select * from unid;
+
+delete from produto.unid /*banco.tabela*/ where (unid_id=4);/*id do produto a ser deletado*/
