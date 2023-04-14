@@ -1,0 +1,3 @@
+use produto;
+create user userteste /*nome do usuario*/ identified by 'Senai@123'/*senha*/;
+grant select on produto.* /*banco.tabela*/ to userteste; /*permite acesso select ao userteste no banco produto*/
